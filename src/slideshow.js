@@ -54,10 +54,14 @@ export function slideShow(){
             containerNode.appendChild(slidesArr[i]);
         }
 
+        //at every interval (specified by the parameter), index will increment and then display the corresponding slide
         setInterval(function(){
             increment();
             displaySlide();
-        })
+        }, interval)
+
+        //displays the first slide
+        window.onload=displaySlide
 
     }
 
